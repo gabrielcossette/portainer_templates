@@ -2027,7 +2027,7 @@
         {
           "default": "",
           "label": "UNIQUE_NAME",
-          "name": "NAME"
+          "name": "UNIQUE_NAME"
         },
         {
           "default": "",
