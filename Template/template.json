@@ -2025,6 +2025,11 @@
       "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
       "env": [
         {
+          "default": "",
+          "label": "URL",
+          "name": "URL"
+        },
+        {
           "default": "1000",
           "label": "PUID",
           "name": "PUID"
@@ -2057,7 +2062,7 @@
       "platform": "linux",
       "repository": {
         "stackfile": "Template/Stack/nextcloud.yml",
-        "url": "https://github.com/Qballjos/portainer_templates"
+        "url": "https://github.com/gabrielcossette/portainer_templates"
       },
       "title": "Nextcloud",
       "type": 3
