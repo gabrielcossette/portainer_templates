@@ -16,9 +16,9 @@ services:
     networks:
     - public
     labels:
-    - traefik.http.routers.${NAME}.rule=Host(`${URL}`)
-    - traefik.http.routers.${NAME}.tls=true
-    - traefik.http.routers.${NAME}.tls.certresolver=leresolver
+    - traefik.http.routers.${URL}.rule=Host(`${URL}`)
+    - traefik.http.routers.${URL}.tls=true
+    - traefik.http.routers.${URL}.tls.certresolver=leresolver
     - traefik.port=80
   nextcloud_db:
     image: linuxserver/mariadb
