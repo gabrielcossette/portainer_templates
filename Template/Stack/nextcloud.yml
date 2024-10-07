@@ -15,6 +15,13 @@ services:
     restart: unless-stopped
     depends_on:
       - nextcloud_db
+    networks:
+    - public
+    labels:
+    - traefik.http.routers.nginx.rule=Host(`${URL}`)
+    - traefik.http.routers.nginx.tls=true
+    - traefik.http.routers.nginx.tls.certresolver=leresolver
+    - traefik.port=80
   nextcloud_db:
     image: linuxserver/mariadb
     container_name: nextcloud_db
@@ -29,3 +36,6 @@ services:
     volumes:
       - /portainer/AppData/Config/Nextcloud/DB:/config
     restart: unless-stopped
+networks:
+  public:
+    external: true
