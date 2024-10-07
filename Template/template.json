@@ -2026,6 +2026,11 @@
       "env": [
         {
           "default": "",
+          "label": "NAME",
+          "name": "NAME"
+        },
+        {
+          "default": "",
           "label": "URL",
           "name": "URL"
         },
