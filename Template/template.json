@@ -2066,7 +2066,7 @@
         "url": "https://github.com/gabrielcossette/portainer_templates"
       },
       "title": "Nextcloud",
-      "type": 2
+      "type": 3
     },
     {
       "categories": ["Web", "Proxy"],
