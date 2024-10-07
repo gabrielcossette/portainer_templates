@@ -34,9 +34,6 @@ services:
     volumes:
        - /portainer/Files/AppData/Config/nextcloud/db-data:/config
     restart: unless-stopped
-volumes:
-  ${UNIQUE_NAME}_config:
-  ${UNIQUE_NAME}_db:
 networks:
   public:
     external: true
