@@ -9,16 +9,16 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - ${NAME}_config:/config
+      - ${UNIQUE_NAME}_config:/config
     restart: unless-stopped
     depends_on:
       - nextcloud_db
     networks:
     - public
     labels:
-    - traefik.http.routers.${NAME}.rule=Host(`${URL}`)
-    - traefik.http.routers.${NAME}.tls=true
-    - traefik.http.routers.${NAME}.tls.certresolver=leresolver
+    - traefik.http.routers.${UNIQUE_NAME}.rule=Host(`${URL}`)
+    - traefik.http.routers.${UNIQUE_NAME}.tls=true
+    - traefik.http.routers.${UNIQUE_NAME}.tls.certresolver=leresolver
     - traefik.port=80
   nextcloud_db:
     image: linuxserver/mariadb
@@ -32,7 +32,7 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
     volumes:
-      - ${NAME}_db:/config
+      - ${UNIQUE_NAME}_db:/config
     restart: unless-stopped
 networks:
   public:
