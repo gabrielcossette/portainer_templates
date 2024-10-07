@@ -9,7 +9,7 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - /portainer/Files/AppData/Config/nextcloud/config:/config
+      - /portainer/Files/AppData/Config/Nextcloud/Config:/config
     restart: unless-stopped
     depends_on:
       - nextcloud_db
@@ -32,7 +32,7 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
     volumes:
-      - /portainer/Files/AppData/Config/nextcloud/db-data:/config
+      - /portainer/AppData/Config/Nextcloud/DB:/config
     restart: unless-stopped
 networks:
   public:
