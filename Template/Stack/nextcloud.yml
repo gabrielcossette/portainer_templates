@@ -1,7 +1,7 @@
 ---
 version: "2"
 services:
-  ${UNIQUE_NAME}:
+  nextcloud:
     image: linuxserver/nextcloud
     container_name: nextcloud
     environment:
@@ -20,7 +20,7 @@ services:
     - traefik.http.routers.${UNIQUE_NAME}.tls=true
     - traefik.http.routers.${UNIQUE_NAME}.tls.certresolver=leresolver
     - traefik.port=80
-  ${UNIQUE_NAME}_db:
+  nextcloud_db:
     image: linuxserver/mariadb
     container_name: nextcloud_db
     environment:
