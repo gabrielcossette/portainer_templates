@@ -34,6 +34,9 @@ services:
     volumes:
       - ${UNIQUE_NAME}_db:/config
     restart: unless-stopped
+volumes:
+  ${UNIQUE_NAME}_config:
+  ${UNIQUE_NAME}_db:
 networks:
   public:
     external: true
