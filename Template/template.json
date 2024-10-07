@@ -2026,7 +2026,7 @@
       "env": [
         {
           "default": "",
-          "label": "NAME",
+          "label": "UNIQUE_NAME",
           "name": "NAME"
         },
         {
