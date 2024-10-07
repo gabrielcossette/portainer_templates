@@ -9,9 +9,7 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - /portainer/Files/AppData/Config/Nextcloud/Config:/config
-    ports:
-      - ${PORT}:443
+      - ${NAME}_config:/config
     restart: unless-stopped
     depends_on:
       - nextcloud_db
@@ -34,7 +32,7 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
     volumes:
-      - /portainer/AppData/Config/Nextcloud/DB:/config
+      - ${NAME}_db:/config
     restart: unless-stopped
 networks:
   public:
