@@ -2050,10 +2050,6 @@
         {
           "label": "MYSQL_ROOT_PASSWORD",
           "name": "MYSQL_ROOT_PASSWORD"
-        },
-        {
-          "label": "PORT",
-          "name": "PORT"
         }
       ],
       "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/nextcloud-icon.png",
