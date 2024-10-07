@@ -3,7 +3,6 @@ version: "2"
 services:
   nextcloud:
     image: linuxserver/nextcloud
-    container_name: nextcloud
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -22,7 +21,6 @@ services:
     - traefik.port=80
   nextcloud_db:
     image: linuxserver/mariadb
-    container_name: nextcloud_db
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
